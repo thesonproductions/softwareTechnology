@@ -14,7 +14,7 @@ class App{
             $this->controller = $url[0]."Controller";
         }
         require_once "controllers/".$this->controller."php";
-
+        
     }
 
     public function urlProcess(){ // ham nay de xu ly url khi truyen tham so vao
