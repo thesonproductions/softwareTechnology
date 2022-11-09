@@ -5,10 +5,17 @@ class App{
     protected $action = "index";
     protected $params = [];
 
+    public function __construct(){
+        $url = $this->urlProcess();
+        
+
+    }
+
     public function solveUrl($url){
 
 
     }
+
     public function callUrl($url){
         if (file_exists("controllers/".$url[0]."Controller.php")){
             $this->controller = $url[0]."Controller";

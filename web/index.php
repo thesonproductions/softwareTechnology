@@ -1,5 +1,5 @@
 <?php
-require_once "core/App.php";
-$app = new App();
+require_once "core/Router.php";
+$router = new Router();
 
 ?>
