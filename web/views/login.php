@@ -1,4 +1,5 @@
 <?php require_once "./core/config.php"; ?>
+
 <!DOCTYPE html>
 <html dir="ltr">
 
@@ -9,10 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <!-- Favicon icon -->
+    <!-- base url link -->
     <base href="<?php echo BASE_URLS; ?>">
+    <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="public/master/assets/images/favicon.png">
-    <title>Matrix Template - The Ultimate Multipurpose admin template</title>
+    <title>Cổng thông tin và đạo tạo</title>
     <!-- Custom CSS -->
     <link href="public/master/dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
