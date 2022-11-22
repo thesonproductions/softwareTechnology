@@ -45,7 +45,7 @@
             <div class="auth-box bg-dark border-top border-secondary">
                 <div id="loginform">
                     <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img src="public/master/assets/images/logo.png" alt="logo" /></span>
+                        <span class="db"><img src="public/master/assets/images/logo2.png" alt="logo" /></span>
                     </div>
                     <!-- Form -->
                     <form class="form-horizontal m-t-20" id="loginform" action="index.html">
