@@ -24,6 +24,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body>
     <div class="main-wrapper">
         <!-- ============================================================== -->
@@ -48,38 +49,52 @@
                         <span class="db"><img src="public/master/assets/images/logo2.png" alt="logo" /></span>
                     </div>
                     <!-- Form -->
-                    <form class="form-horizontal m-t-20" id="loginform" action="index.html">
-                        <div class="row p-b-30">
+                    <form class="form-horizontal m-t-20" id="loginform" method="POST">
+                        <div class="row p-b-30" style="padding: 0;">
                             <div class="col-12">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i class="ti-user"></i></span>
+                                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i
+                                                class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="" id="textname">
+                                    <input type="text" class="form-control form-control-lg"
+                                        placeholder="Please enter Username" aria-label="Username"
+                                        aria-describedby="basic-addon1" required="" id="username" name="username">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text bg-warning text-white" id="basic-addon2"><i class="ti-pencil"></i></span>
+                                        <span class="input-group-text bg-warning text-white" id="basic-addon2"><i
+                                                class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="password" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
+                                    <input type="password" class="form-control form-control-lg" placeholder="Password"
+                                        aria-label="Password" aria-describedby="basic-addon1" required="" id="password"
+                                        name="password">
                                 </div>
                             </div>
+                            <div class="status-error">
+                               
+                            </div>
                         </div>
+
                         <div class="row border-top border-secondary">
                             <div class="col-12">
                                 <div class="form-group">
-                                    <div class="p-t-20">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock m-r-5"></i> Lost password?</button>
-                                        <button class="btn btn-success float-right" type="submit">Login</button>
+                                    <div class="p-t-20" style="display: flex;justify-content: space-between;">
+                                        <button class="btn btn-info" id="to-recover" type="button"><i
+                                                class="fa fa-lock m-r-5"></i> Lost password?</button>
+                                        <!-- <button class="btn btn-success float-right" type="submit">Login</button> -->
+                                        <input type="submit" class="btn btn-success" id="btn-submit">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
+
                 </div>
                 <div id="recoverform">
                     <div class="text-center">
-                        <span class="text-white">Enter your e-mail address below and we will send you instructions how to recover a password.</span>
+                        <span class="text-white">Enter your e-mail address below and we will send you instructions how
+                            to recover a password.</span>
                     </div>
                     <div class="row m-t-20">
                         <!-- Form -->
@@ -87,15 +102,18 @@
                             <!-- email -->
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text bg-danger text-white" id="basic-addon1"><i class="ti-email"></i></span>
+                                    <span class="input-group-text bg-danger text-white" id="basic-addon1"><i
+                                            class="ti-email"></i></span>
                                 </div>
-                                <input type="text" class="form-control form-control-lg" placeholder="Email Address" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control form-control-lg" placeholder="Email Address"
+                                    aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                             <!-- pwd -->
                             <div class="row m-t-20 p-t-20 border-top border-secondary">
                                 <div class="col-12">
                                     <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                    <button class="btn btn-info float-right" type="button" name="action">Recover</button>
+                                    <button class="btn btn-info float-right" type="button"
+                                        name="action">Recover</button>
                                 </div>
                             </div>
                         </form>
@@ -139,11 +157,72 @@
         $("#loginform").slideUp();
         $("#recoverform").fadeIn();
     });
-    $('#to-login').click(function(){
-        
+    $('#to-login').click(function() {
+
         $("#recoverform").hide();
         $("#loginform").fadeIn();
     });
+
+    $(document).ready(function() {
+        $("#loginform").on('submit', function(e) {
+            e.preventDefault()
+            var username = $("#username").val()
+            var password = $("#password").val()
+            console.log({
+                username: username,
+                password: password
+            })
+            if (validForm()) {
+                $.ajax({
+                    type: "POST",
+                    url: "Login/",
+                    data: {
+                        username: username,
+                        password: password
+                    },
+                    cache: false,
+                    dataType: 'json',
+                    beforeSend: function() {
+                        $('#btn-submit').attr('disabled', 'disabled');
+                    },
+                    success: function(response) {
+
+                    }
+                })
+            }
+        })
+
+        function validForm() {
+            var username = $('#username').val()
+            var password = $('#password').val()
+
+            if (validPassword(password) === false) {
+                $('.status-error').css('display','block')
+                $('.status-error').css('color','red')
+                $('.status-error').html('<p class="">' + 'invalid password or email ! please try again.' + '</p>')
+                return false
+            } else if (validEmail(username) === false) {
+                $('.status-error').css('display','block')
+                $('.status-error').css('color','red')
+                $('.status-error').html('<p class="">' + 'invalid password or email ! please try again.' + '</p>')
+                return false
+            }
+            return true
+        }
+
+        function validEmail(email) {
+            var re =
+                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return re.test(email);
+        }
+
+
+        function validPassword(password) {
+            const isStrongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
+            return isStrongPassword.test(password)
+        }
+
+    })
     </script>
 </body>
 
