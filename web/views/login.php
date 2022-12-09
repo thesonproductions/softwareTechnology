@@ -1,229 +1,104 @@
-<?php require_once "./core/config.php"; ?>
-
 <!DOCTYPE html>
-<html dir="ltr">
+<html lang="en">
+
+<!-- Mirrored from preschool.dreamguystech.com/template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Nov 2022 14:37:29 GMT -->
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- base url link -->
-    <base href="<?php echo BASE_URLS; ?>">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="public/master/assets/images/favicon.png">
-    <title>Cổng thông tin và đạo tạo</title>
-    <!-- Custom CSS -->
-    <link href="public/master/dist/css/style.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Login</title>
+
+    <link rel="shortcut icon" href="https://preschool.dreamguystech.com/template/assets/img/favicon.png">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700&amp;display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="public/master//assets/plugins/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/master/assets/plugins/feather/feather.css">
+
+    <link rel="stylesheet" href="public/master/assets/plugins/icons/flags/flags.css">
+
+    <link rel="stylesheet" href="public/master/assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="public/master/assets/plugins/fontawesome/css/all.css">
+
+    <link rel="stylesheet" href="public/master/assets/css/style.css">
 </head>
 
 <body>
-    <div class="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <div class="preloader">
-            <div class="lds-ripple">
-                <div class="lds-pos"></div>
-                <div class="lds-pos"></div>
-            </div>
-        </div>
-        <!-- ============================================================== -->
-        <!-- Preloader - style you can find in spinners.css -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
-            <div class="auth-box bg-dark border-top border-secondary">
-                <div id="loginform">
-                    <div class="text-center p-t-20 p-b-20">
-                        <span class="db"><img src="public/master/assets/images/logo2.png" alt="logo" /></span>
-                    </div>
-                    <!-- Form -->
-                    <form class="form-horizontal m-t-20" id="loginform" method="POST">
-                        <div class="row p-b-30" style="padding: 0;">
-                            <div class="col-12">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text bg-success text-white" id="basic-addon1"><i
-                                                class="ti-user"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control form-control-lg"
-                                        placeholder="Please enter Username" aria-label="Username"
-                                        aria-describedby="basic-addon1" required="" id="username" name="username">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text bg-warning text-white" id="basic-addon2"><i
-                                                class="ti-pencil"></i></span>
-                                    </div>
-                                    <input type="password" class="form-control form-control-lg" placeholder="Password"
-                                        aria-label="Password" aria-describedby="basic-addon1" required="" id="password"
-                                        name="password">
-                                </div>
-                            </div>
-                            <div class="status-error">
-                               
-                            </div>
-                        </div>
 
-                        <div class="row border-top border-secondary">
-                            <div class="col-12">
+    <div class="main-wrapper login-body">
+        <div class="login-wrapper">
+            <div class="container">
+                <div class="loginbox">
+                    <div class="login-left">
+                        <img class="img-fluid" src="https://preschool.dreamguystech.com/template/assets/img/login.png"
+                            alt="Logo">
+                    </div>
+                    <div class="login-right">
+                        <div class="login-right-wrap">
+                            <h1>Welcome to Preskool</h1>
+                            <p class="account-subtitle">Need an account? <a
+                                    href="https://preschool.dreamguystech.com/template/register.html">Sign Up</a></p>
+                            <h2>Sign in</h2>
+
+                            <form action="https://preschool.dreamguystech.com/template/index.html">
                                 <div class="form-group">
-                                    <div class="p-t-20" style="display: flex;justify-content: space-between;">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i
-                                                class="fa fa-lock m-r-5"></i> Lost password?</button>
-                                        <!-- <button class="btn btn-success float-right" type="submit">Login</button> -->
-                                        <input type="submit" class="btn btn-success" id="btn-submit">
+                                    <label>Username <span class="login-danger">*</span></label>
+                                    <input class="form-control" type="text">
+                                    <span class="profile-views"><i class="fas fa-user-circle"></i></span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Password <span class="login-danger">*</span></label>
+                                    <input class="form-control pass-input" type="text">
+                                    <span class="profile-views feather-eye toggle-password"></span>
+                                </div>
+                                <div class="forgotpass">
+                                    <div class="remember-me">
+                                        <label class="custom_check mr-2 mb-0 d-inline-flex remember-me"> Remember me
+                                            <input type="checkbox" name="radio">
+                                            <span class="checkmark"></span>
+                                        </label>
                                     </div>
+                                    <a href="https://preschool.dreamguystech.com/template/forgot-password.html">Forgot
+                                        Password?</a>
                                 </div>
-                            </div>
-                        </div>
-                    </form>
+                                <div class="form-group">
+                                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                </div>
+                            </form>
 
-                </div>
-                <div id="recoverform">
-                    <div class="text-center">
-                        <span class="text-white">Enter your e-mail address below and we will send you instructions how
-                            to recover a password.</span>
-                    </div>
-                    <div class="row m-t-20">
-                        <!-- Form -->
-                        <form class="col-12" action="index.html">
-                            <!-- email -->
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text bg-danger text-white" id="basic-addon1"><i
-                                            class="ti-email"></i></span>
-                                </div>
-                                <input type="text" class="form-control form-control-lg" placeholder="Email Address"
-                                    aria-label="Username" aria-describedby="basic-addon1">
+                            <div class="login-or">
+                                <span class="or-line"></span>
+                                <span class="span-or">or</span>
                             </div>
-                            <!-- pwd -->
-                            <div class="row m-t-20 p-t-20 border-top border-secondary">
-                                <div class="col-12">
-                                    <a class="btn btn-success" href="#" id="to-login" name="action">Back To Login</a>
-                                    <button class="btn btn-info float-right" type="button"
-                                        name="action">Recover</button>
-                                </div>
+
+                            <div class="social-login">
+                                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             </div>
-                        </form>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- ============================================================== -->
-        <!-- Login box.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper scss in scafholding.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper scss in scafholding.scss -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Right Sidebar -->
-        <!-- ============================================================== -->
     </div>
-    <!-- ============================================================== -->
-    <!-- All Required js -->
-    <!-- ============================================================== -->
-    <script src="public/master/assets/libs/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="public/master/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="public/master/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugin js -->
-    <!-- ============================================================== -->
-    <script>
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".preloader").fadeOut();
-    // ============================================================== 
-    // Login and Recover Password 
-    // ============================================================== 
-    $('#to-recover').on("click", function() {
-        $("#loginform").slideUp();
-        $("#recoverform").fadeIn();
-    });
-    $('#to-login').click(function() {
-
-        $("#recoverform").hide();
-        $("#loginform").fadeIn();
-    });
-
-    $(document).ready(function() {
-        $("#loginform").on('submit', function(e) {
-            e.preventDefault()
-            var username = $("#username").val()
-            var password = $("#password").val()
-            console.log({
-                username: username,
-                password: password
-            })
-            if (validForm()) {
-                $.ajax({
-                    type: "POST",
-                    url: "Login/",
-                    data: {
-                        username: username,
-                        password: password
-                    },
-                    cache: false,
-                    dataType: 'json',
-                    beforeSend: function() {
-                        $('#btn-submit').attr('disabled', 'disabled');
-                    },
-                    success: function(response) {
-
-                    }
-                })
-            }
-        })
-
-        function validForm() {
-            var username = $('#username').val()
-            var password = $('#password').val()
-
-            if (validPassword(password) === false) {
-                $('.status-error').css('display','block')
-                $('.status-error').css('color','red')
-                $('.status-error').html('<p class="">' + 'invalid password or email ! please try again.' + '</p>')
-                return false
-            } else if (validEmail(username) === false) {
-                $('.status-error').css('display','block')
-                $('.status-error').css('color','red')
-                $('.status-error').html('<p class="">' + 'invalid password or email ! please try again.' + '</p>')
-                return false
-            }
-            return true
-        }
-
-        function validEmail(email) {
-            var re =
-                /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-            return re.test(email);
-        }
 
 
-        function validPassword(password) {
-            const isStrongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
-            return isStrongPassword.test(password)
-        }
+    <script src="public/master/assets/js/jquery-3.6.0.min.js"></script>
 
-    })
+    <script src="public/master/assets/plugins/bootstrap/js/bootstrap.bundle.min.js">
     </script>
+
+    <script src="public/master/template/assets/js/feather.min.js"></script>
+
+    <script src="public/master/template/assets/js/script.js"></script>
 </body>
+
+<!-- Mirrored from preschool.dreamguystech.com/template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Nov 2022 14:37:29 GMT -->
 
 </html>
