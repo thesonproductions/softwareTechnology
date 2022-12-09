@@ -43,15 +43,15 @@
                                     href="https://preschool.dreamguystech.com/template/register.html">Sign Up</a></p>
                             <h2>Sign in</h2>
 
-                            <form action="https://preschool.dreamguystech.com/template/index.html">
+                            <form method="POST" id="form_login">
                                 <div class="form-group">
                                     <label>Username <span class="login-danger">*</span></label>
-                                    <input class="form-control" type="text">
+                                    <input class="form-control" type="text" id="username" name = "username">
                                     <span class="profile-views"><i class="fas fa-user-circle"></i></span>
                                 </div>
                                 <div class="form-group">
                                     <label>Password <span class="login-danger">*</span></label>
-                                    <input class="form-control pass-input" type="text">
+                                    <input class="form-control pass-input" type="password" id="password" name = "password">
                                     <span class="profile-views feather-eye toggle-password"></span>
                                 </div>
                                 <div class="forgotpass">
@@ -65,7 +65,12 @@
                                         Password?</a>
                                 </div>
                                 <div class="form-group">
-                                    <button class="btn btn-primary btn-block" type="submit">Login</button>
+                                    <div id="form_error">
+                                   
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="btn btn-primary btn-block" type="submit" value="login" id="btn_login">
                                 </div>
                             </form>
 
@@ -98,7 +103,58 @@
 
     <script src="public/master/template/assets/js/script.js"></script>
 </body>
+<script>
+    $(document).ready(function(){
+       
+        $("#form_login").on("submit",function(e){
+            var username = $("#username").val()
+            var password = $("#password").val()
 
+            flag = checkValid(username,password)
+     
+            e.preventDefault();
+            var dataV = {username: username, password: password}
+            if (flag){
+                $.ajax({
+                    type :"POST",
+                    url: 'Login/formLogin',
+                    data : dataV,
+                    cache:false,
+                    dataType: 'json',
+                    beforeSend:function(){
+                        $('#btn_login').attr('disabled', 'disabled');
+                    }, success: function(response){
+                        
+                    }
+                })
+            }
+        })
+       
+    })
+    function checkValid(username, password){
+        if (validEmail(username) === false){
+            $('#form_error').css('display','block')
+            $('#form_error').css('color','red')
+            $('#form_error').html('<p>' + 'invalid Username! please try again.' + '</p>')
+            return false
+        }
+        else if (validPassword(password) === false){
+            $('#form_error').css('display','block')
+            $('#form_error').css('color','red')
+            $('#form_error').html('<p>' + 'invalid password! please try again.' + '</p>')
+            return false
+        }
+        return true
+    }
+    function validEmail(username) {
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-z\-0-9]+\.)+[a-z]{2,}))$/;
+        return re.test(username);
+    }
+    function validPassword(password) {
+        const isStrongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$/;
+        return isStrongPassword.test(password)
+    }
+</script>
 <!-- Mirrored from preschool.dreamguystech.com/template/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 24 Nov 2022 14:37:29 GMT -->
 
 </html>
