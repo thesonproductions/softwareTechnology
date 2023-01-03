@@ -11,5 +11,10 @@ class user extends database{
         $this->setQuery($sql);
         return $this->loadRow(array($username, md5($password)));
     }
+    public function readUser($id_user){
+        $sql = "SELECT * FROM managements WHERE id = ?";
+        $this->setQuery($sql);
+        return $this->loadRow(array($id_user));
+    }
 }
 ?>

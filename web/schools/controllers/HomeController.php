@@ -6,8 +6,12 @@ class HomeController extends BaseController{
         parent::__construct();
     }
     public function index(){
+        $model = $this->model("User");
+        $arr = $model->readUser($_SESSION['id_user']);
         $view = "homes/Index";
-        $this->view($view);
+        $this->view($view,[
+            "user"=>$arr
+        ]);
     }
 }
 ?>

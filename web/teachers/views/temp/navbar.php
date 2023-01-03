@@ -1,20 +1,28 @@
 <div class="sidebar" id="sidebar">
-        <div class="sidebar-inner slimscroll">
-            <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
-                    <li class="menu-title">
-                        <span>Main Menu</span>
-                    </li>
-                    <li class="submenu active">
-                        <a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span
-                                class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="index-2.html" class="active">Admin Dashboard</a></li>
-                            <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
-                            <li><a href="student-dashboard.html">Student Dashboard</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
+    <div class="sidebar-inner slimscroll">
+        <div id="sidebar-menu" class="sidebar-menu">
+            <ul>
+                <li class="menu-title">
+                    <span>Main Menu</span>
+                </li>
+                <li>
+                    <a href="home/index"><i class="feather-grid"></i> <span>Dashboard</span></a>
+                </li>
+                <li class="submenu">
+                    <a href="#"><i class="fas fa-graduation-cap"></i> <span> Score</span> <spanclass="menu-arrow"></span></a>
+                    <ul>
+                        <li><a href="score/index">Score Dashboard</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="home/profile"><i class="fa fa-user" aria-hidden="true"></i> <span>Teacher
+                            Profile</span></a>
+                </li>
+                <li>
+                    <a href="login/logout"><i class="fa fa-power-off" aria-hidden="true"></i> <span>Logout</span></a>
+                </li>
+
+                <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-graduation-cap"></i> <span> Students</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -23,8 +31,8 @@
                             <li><a href="add-student.html">Student Add</a></li>
                             <li><a href="edit-student.html">Student Edit</a></li>
                         </ul>
-                    </li>
-                    <li class="submenu">
+                    </li> -->
+                <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -33,8 +41,8 @@
                             <li><a href="add-teacher.html">Teacher Add</a></li>
                             <li><a href="edit-teacher.html">Teacher Edit</a></li>
                         </ul>
-                    </li>
-                    <li class="submenu">
+                    </li> -->
+                <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -42,8 +50,8 @@
                             <li><a href="add-department.html">Department Add</a></li>
                             <li><a href="edit-department.html">Department Edit</a></li>
                         </ul>
-                    </li>
-                    <li class="submenu">
+                    </li> -->
+                <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -51,8 +59,8 @@
                             <li><a href="add-subject.html">Subject Add</a></li>
                             <li><a href="edit-subject.html">Subject Edit</a></li>
                         </ul>
-                    </li>
-                    <li class="submenu">
+                    </li> -->
+                <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-clipboard"></i> <span> Invoices</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -63,8 +71,8 @@
                             <li><a href="view-invoice.html">Invoices Details</a></li>
                             <li><a href="invoices-settings.html">Invoices Settings</a></li>
                         </ul>
-                    </li>
-                    <li class="menu-title">
+                    </li> -->
+                <!-- <li class="menu-title">
                         <span>Management</span>
                     </li>
                     <li class="submenu">
@@ -277,8 +285,8 @@
                                 <a href="javascript:void(0);"> <span>Level 1</span></a>
                             </li>
                         </ul>
-                    </li>
-                </ul>
-            </div>
+                    </li> -->
+            </ul>
         </div>
     </div>
+</div>

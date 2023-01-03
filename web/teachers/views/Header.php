@@ -1,4 +1,4 @@
-<?php include "core/config.php"; ?>
+<?php include_once "core/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 

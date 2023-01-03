@@ -12,10 +12,9 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-sub-header">
-                            <h3 class="page-title">Welcome Admin!</h3>
+                            <h3 class="page-title">Welcome <?php echo $_SESSION['username']; ?></h3>
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="public/master/index.html">Home</a></li>
-                                <li class="breadcrumb-item active">Admin</li>
+                                <li class="breadcrumb-item"><a href="public/master/index.html">Home / Teacher</a></li>
                             </ul>
                         </div>
                     </div>

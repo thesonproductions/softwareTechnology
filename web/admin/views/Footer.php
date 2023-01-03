@@ -27,7 +27,14 @@
     <script src="public/master/assets/libs/flot/jquery.flot.crosshair.js"></script>
     <script src="public/master/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
     <script src="public/master/dist/js/pages/chart/chart-page-init.js"></script>
-
+    <script src="public/master/assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script>
+        /****************************************
+         *       Basic Table                   *
+         ****************************************/
+        $('#zero_config').DataTable();
+        
+    </script>
 </body>
 
 </html>

@@ -8,7 +8,7 @@
 
 <script src="public/master/assets/plugins/apexchart/apexcharts.min.js"></script>
 <script src="public/master/assets/plugins/apexchart/chart-data.js"></script>
-
+<script src="https://preschool.dreamguystech.com/template/assets/plugins/datatables/datatables.min.js"></script>
 <script src="public/master/assets/js/script.js"></script>
 </body>
 

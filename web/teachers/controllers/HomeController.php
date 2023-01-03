@@ -6,7 +6,11 @@ class HomeController extends BaseController{
         parent::__construct();
     }
     public function index(){
-        $view = "homes/Index";
+        $view = "homes/index";
+        $this->view($view);
+    }
+    public function profile(){
+        $view = "homes/profile";
         $this->view($view);
     }
 }

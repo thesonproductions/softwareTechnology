@@ -5,7 +5,23 @@
                     <li class="menu-title">
                         <span>Main Menu</span>
                     </li>
-                    <li class="submenu active">
+                    <li class="active">
+                        <a href="home/index"><i class="feather-grid"></i> <span>Dashboard</span></a>
+                    </li>
+                    <!-- <li class="">
+                        <a href="fees.html"><i class="fa-sharp fa-solid fa-list"></i><span>Student List</span></a>
+                    </li>
+                    <li class="">
+                        <a href="exam.html"><i class="fa-sharp fa-solid fa-pen-to-square"></i> <span>Edit Score</span></a>
+                    </li>
+                    <li class="">
+                        <a href="event.html"><i class="fa-sharp fa-solid fa-user"></i> <span>My Profile</span></a>
+                    </li>
+                    <li class="">
+                        <a href="time-table.html"><i class="fas fa-table"></i> <span>Time Table</span></a>
+                    </li> -->
+                   
+                    <!-- <li class="submenu active">
                         <a href="#"><i class="feather-grid"></i> <span> Dashboard</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -13,46 +29,45 @@
                             <li><a href="teacher-dashboard.html">Teacher Dashboard</a></li>
                             <li><a href="student-dashboard.html">Student Dashboard</a></li>
                         </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fas fa-graduation-cap"></i> <span> Students</span> <span
-                                class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="students.html">Student List</a></li>
-                            <li><a href="student-details.html">Student View</a></li>
-                            <li><a href="add-student.html">Student Add</a></li>
-                            <li><a href="edit-student.html">Student Edit</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> Teachers</span> <span
-                                class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="teachers.html">Teacher List</a></li>
-                            <li><a href="teacher-details.html">Teacher View</a></li>
-                            <li><a href="add-teacher.html">Teacher Add</a></li>
-                            <li><a href="edit-teacher.html">Teacher Edit</a></li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#"><i class="fas fa-building"></i> <span> Departments</span> <span
-                                class="menu-arrow"></span></a>
-                        <ul>
-                            <li><a href="departments.html">Department List</a></li>
-                            <li><a href="add-department.html">Department Add</a></li>
-                            <li><a href="edit-department.html">Department Edit</a></li>
-                        </ul>
-                    </li>
+                    </li> -->
                     <li class="submenu">
                         <a href="#"><i class="fas fa-book-reader"></i> <span> Subjects</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
-                            <li><a href="subjects.html">Subject List</a></li>
-                            <li><a href="add-subject.html">Subject Add</a></li>
-                            <li><a href="edit-subject.html">Subject Edit</a></li>
+                            <li><a href="subject/index">Subject List</a></li>
+                            <li><a href="subject/addSubject">Subject Add</a></li>
+                            <li><a href="subject/editSubject?id=ADMIN00">Subject Edit</a></li>
                         </ul>
                     </li>
+                    <li class="">
+                        <a href="manager/manager"><i class="fas fa-cog"></i> <span>Management</span></a>
+                    </li>
+                    <!-- <li class="submenu">
+                        <a href="#"><i class="fas fa-cog"></i> <span> Management</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul> -->
+                            <!-- <li><a href="students.html">Student Management</a></li> -->
+                            <!-- <li><a href="student-details.html">Class Management</a></li>
+                            <li><a href="add-student.html">Score Management</a></li> -->
+                            <!-- <li><a href="edit-student.html">Semester Management</a></li> -->
+                            <!-- <li><a href="">Specialization Major</a></li>
+                        </ul>
+                    </li> -->
                     <li class="submenu">
+                        <a href="#"><i class="fas fa-chalkboard-teacher"></i> <span> List</span> <span
+                                class="menu-arrow"></span></a>
+                        <ul>
+                            <li><a href="manager/scholarship">Scholarship List</a></li>
+                            <li><a href="manager/alert">Academic Alert List</a></li>
+                            <li><a href="manager/graduated">Graduation Review List</a></li>
+                            <!-- <li><a href="edit-teacher.html">Teacher Edit</a></li> -->
+                        </ul>
+                    </li>
+                 
+                    <li class="">
+                        <a href="login/logout"><i class="fa-sharp fa-solid fa-power-off"></i> <span>Log Out</span></a>
+                    </li>
+                    <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-clipboard"></i> <span> Invoices</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -63,11 +78,11 @@
                             <li><a href="view-invoice.html">Invoices Details</a></li>
                             <li><a href="invoices-settings.html">Invoices Settings</a></li>
                         </ul>
-                    </li>
-                    <li class="menu-title">
+                    </li> -->
+                    <!-- <li class="menu-title">
                         <span>Management</span>
-                    </li>
-                    <li class="submenu">
+                    </li> -->
+                    <!-- <li class="submenu">
                         <a href="#"><i class="fas fa-file-invoice-dollar"></i> <span> Accounts</span> <span
                                 class="menu-arrow"></span></a>
                         <ul>
@@ -78,9 +93,9 @@
                             <li><a href="add-expenses.html">Add Expenses</a></li>
                             <li><a href="add-salary.html">Add Salary</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="holiday.html"><i class="fas fa-holly-berry"></i> <span>Holiday</span></a>
+                    </li> -->
+                    <!-- <li class="active">
+                        <a href="home/index"><i class="fas fa-holly-berry"></i> <span>Holiday</span></a>
                     </li>
                     <li>
                         <a href="fees.html"><i class="fas fa-comment-dollar"></i> <span>Fees</span></a>
@@ -277,7 +292,7 @@
                                 <a href="javascript:void(0);"> <span>Level 1</span></a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

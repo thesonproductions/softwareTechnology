@@ -1,4 +1,4 @@
-<?php include "core/config.php"; ?>
+<?php include_once "core/config.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,6 +6,7 @@
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <title>Dashboard - SVVTQ</title>
     <base href="<?php echo BASE_URLS; ?>">
@@ -24,7 +25,9 @@
     <link rel="stylesheet" href="public/master/assets/plugins/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="public/master/assets/plugins/fontawesome/css/all.css">
 
+    <link rel="stylesheet"
+        href="https://preschool.dreamguystech.com/template/assets/plugins/simple-calendar/simple-calendar.css">
+
     <link rel="stylesheet" href="public/master/assets/css/style.css">
-</head>
 
 <body>
